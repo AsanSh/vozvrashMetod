@@ -7,31 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int temp = 23;
-        Random age = new Random();
-        int maxAge = 100;
-        int randomAge = age.nextInt(maxAge);
-        /*
-        1- если возраст человека от 20 до 45 лет и температура на улице от -20 до 30
-        градусов, то возвращаемый результат - “Можно идти гулять”;
-        2- eсли же человеку меньше 20 лет и температура на улице в диапазоне от 0
-        до 28 градусов, то результат снова - “Можно идти гулять”;
-        3- а если человеку больше 45 лет, то результат “Можно идти гулять” формируется
-        только тогда когда на улице температура в диапазоне от -10 до 25 градусов;
-        4- В остальных случаях метод должен возвращать результат - “Оставайтесь дома”;
-        */
-        System.out.println(randomAge);
-        if (randomAge > 20 && randomAge < 25 && temp > -20 && temp < 30) {
-            System.out.println("1- Можно идти гулять");
-        }
-        if (randomAge < 20 && temp > 0 && temp < 28) {
-            System.out.println("2- можно идти гулять");
-        }
-        if (randomAge > 45 && temp > -10 && temp < 25) {
-            System.out.println("3- можно идти гулять");
-        } else {
-            System.out.println("4- Оставайтесь дома");
-        }
+        mojnoGulyatIliNet((int) (Math.random() * (100 - 15 + 1) + 15), 25);
         print();
         print();
         print();
@@ -41,11 +17,35 @@ public class Main {
         generateRandom();
         randomNew();
 
-
     }
 
     // В методе main вызвать написанный метод 5 раз с различными входными данными (аргументами) и распечатать результат в консоль.
-
+  public static void mojnoGulyatIliNet(int randomaAge, int temp) {
+      Random newAge = new Random();
+      int maxAge = 60;
+      int randomAge = newAge.nextInt(maxAge);
+        /*
+        1- если возраст человека от 20 до 45 лет и температура на улице от -20 до 30
+        градусов, то возвращаемый результат - “Можно идти гулять”;
+        2- eсли же человеку меньше 20 лет и температура на улице в диапазоне от 0
+        до 28 градусов, то результат снова - “Можно идти гулять”;
+        3- а если человеку больше 45 лет, то результат “Можно идти гулять” формируется
+        только тогда когда на улице температура в диапазоне от -10 до 25 градусов;
+        4- В остальных случаях метод должен возвращать результат - “Оставайтесь дома”;
+        */
+      System.out.println(randomAge);
+      if (randomAge > 20 && randomAge < 25 && temp > -20 && temp < 30) {
+          System.out.println("1- Можно идти гулять");
+      }
+      if (randomAge < 20 && temp > 0 && temp < 28) {
+          System.out.println("2- можно идти гулять");
+      }
+      if (randomAge > 45 && temp > -10 && temp < 25) {
+          System.out.println("3- можно идти гулять");
+      } else {
+          System.out.println("4- Оставайтесь дома");
+      }
+  }
     public static void print() {
         System.out.println("точно так надо1");
         System.out.println("точно так надо2");
